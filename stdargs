@@ -1,0 +1,15 @@
+#!/usr/bin/env sh
+
+if [ "$#" -eq 0 ]; then
+  cat -
+  exit
+fi
+
+for var in "$@"
+do
+    if [ "$var" = '-' ]; then
+      cat -
+    else
+      echo "$var"
+    fi
+done

@@ -1,0 +1,31 @@
+# stdargs
+
+Enhance your script by easily allowing args or stdin.
+
+## Usage
+
+An example with stdin in the middle:
+
+```bash bash
+stdargs hello - world <<< 'big'
+```
+
+Without stdin:
+
+```bash bash
+stdargs hello world
+stdargs 'hello world'
+```
+
+With only stdin:
+
+> In this case the `-` arg is optional.
+
+```bash bash
+stdargs - <<< hello
+stdargs <<< world
+```
+
+## License
+
+GPLv3
